@@ -35,7 +35,9 @@ function addListItem(task: Task) {
   const item = document.createElement("li");
   const label = document.createElement("label");
   const deletebtn = document.createElement("button");
+  const editbtn = document.createElement("button");
   deletebtn.classList.add("deletebtn");
+  editbtn.classList.add("editbtn");
   const checkbox = document.createElement("input");
   checkbox.addEventListener("change", () => {
     task.completed = checkbox.checked; //with this, checkbox will be ticked
@@ -46,9 +48,13 @@ function addListItem(task: Task) {
   label.append(checkbox, task.title);
   item.append(label);
   item.append(deletebtn);
+  item.append(editbtn);
   list?.append(item);
   deletebtn.addEventListener("click", function () {
     item.parentNode?.removeChild(item);
+  });
+  editbtn.addEventListener("click", function () {
+    label.blur();
   });
 }
 

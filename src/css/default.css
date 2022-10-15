@@ -51,11 +51,18 @@ li {
   margin-bottom: 1.5%;
 }
 
-.deletebtn {
+.deletebtn,
+.editbtn {
   width: 4px;
   height: 4px;
-  background-color: orangered;
   border-radius: 50%;
   margin-top: 1.5%;
   cursor: pointer;
+}
+.deletebtn {
+  background-color: orangered;
+}
+
+.editbtn {
+  background-color: yellowgreen;
 }
